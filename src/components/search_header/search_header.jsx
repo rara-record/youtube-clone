@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import styles from "./search_header.module.css";
+import React, { useRef } from 'react';
+import styles from './search_header.module.css';
 
 const SearchHeader = ({ onSearch }) => {
   const inputRef = useRef();
@@ -9,8 +9,8 @@ const SearchHeader = ({ onSearch }) => {
     // console.log(value);
   };
 
-  const onKeyPress = (e) => {
-    if (e.key === "Enter") {
+  const onKeyPress = e => {
+    if (e.key === 'Enter') {
       handleSearch();
     }
   };
