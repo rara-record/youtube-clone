@@ -1,0 +1,23 @@
+.detail {
+  padding: 0.5rem;
+}
+
+h2 {
+  padding: 2rem 0 0.5rem;
+  font: bold 2.5rem/1 'arial';
+  color: #222;
+  border-bottom: 1px solid #eee;
+}
+
+h3 {
+  padding: 0.5rem 0;
+  font: normal 1.4rem/1 'arial';
+  color: #555;
+  letter-spacing: 0.05rem;
+}
+
+.description {
+  padding: 3rem 0;
+  white-space: pre-wrap;
+  font: normal 1.4rem/1 'arial';
+}
