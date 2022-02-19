@@ -1,6 +1,13 @@
 li {
-  width: calc(50% - 2rem);
   padding: 0.2em;
+}
+
+.list {
+  width: 100%;
+}
+
+.grid {
+  width: calc(50% - 2rem);
 }
 
 .video {
@@ -35,11 +42,11 @@ li {
 }
 
 .title {
-  font: normal 1.5rem/1 "arial";
+  font: normal 1.5rem/1 'arial';
   margin-bottom: 0.5em;
 }
 
 .channel {
-  font: normal 1.4rem/1 "arial";
+  font: normal 1.4rem/1 'arial';
   color: gray;
 }
