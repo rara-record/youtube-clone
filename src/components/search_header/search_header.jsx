@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import styles from './search_header.module.css';
 
-const SearchHeader = ({ onSearch }) => {
+const SearchHeader = ({ onSearch, onPopular, youtube }) => {
   const inputRef = useRef();
+
   const handleSearch = () => {
     const value = inputRef.current.value;
     onSearch(value);
@@ -23,7 +24,9 @@ const SearchHeader = ({ onSearch }) => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <img src="/images/logo.png" alt="logo" />
-        <h1 className={styles.title}>Youtube</h1>
+        <h1 className={styles.title} onClick={() => onPopular(youtube)}>
+          Youtube
+        </h1>
       </div>
       <input
         ref={inputRef}

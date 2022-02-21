@@ -22,15 +22,19 @@ const App = ({ youtube }) => {
       });
   };
 
-  useEffect(() => {
+  const popular = youtube => {
     youtube //
       .mostPopular()
       .then(result => setVideos(result));
+  };
+
+  useEffect(() => {
+    popular(youtube);
   }, []);
 
   return (
     <div className={styles.app}>
-      <SearchHeader onSearch={search} />
+      <SearchHeader onSearch={search} onPopular={popular} youtube={youtube} />
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
