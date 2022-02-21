@@ -25,7 +25,10 @@ const App = ({ youtube }) => {
   const popular = youtube => {
     youtube //
       .mostPopular()
-      .then(result => setVideos(result));
+      .then(result => {
+        setVideos(result);
+        setSelectedVideo(null);
+      });
   };
 
   useEffect(() => {
