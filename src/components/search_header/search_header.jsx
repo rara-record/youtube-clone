@@ -1,13 +1,17 @@
 import React, { memo, useRef } from 'react';
 import styles from './search_header.module.css';
 
-const SearchHeader = memo(({ onSearch, onPopular, youtube }) => {
+const SearchHeader = memo(({ onSearch }) => {
   const inputRef = useRef();
 
-  const handleSearch = () => {
+  const handleSearch = e => {
+    e.preventDefault();
     const value = inputRef.current.value;
     onSearch(value);
-    // console.log(value);
+  };
+
+  const handleLogoClick = () => {
+    window.location = '/';
   };
 
   const onKeyPress = e => {
@@ -26,7 +30,7 @@ const SearchHeader = memo(({ onSearch, onPopular, youtube }) => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <img src="/images/logo.png" alt="logo" />
-        <h1 className={styles.title} onClick={() => onPopular(youtube)}>
+        <h1 className={styles.title} onClick={handleLogoClick}>
           Youtube
         </h1>
       </div>
